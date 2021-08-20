@@ -15,7 +15,7 @@ import retrofit2.Response;
 public class HomePresenter implements HomeContract.Presenter {
     HomeContract.View homeView;
 
-    public HomePresenter(HomeContract.View view) {
+    public HomePresenter(HomeContract.View homeView) {
         this.homeView = homeView;
     }
 
@@ -28,7 +28,6 @@ public class HomePresenter implements HomeContract.Presenter {
         if (homeView != null && homeView.isActive()) {
             homeView.showProgressBar();
         }
-        homeView.showProgressBar();
         Call call = RetrofitClient.getInstance().getMyApi().getWeather(cityName, BuildConfig.API_KEY);
         call.enqueue(new Callback<Main>() {
             @Override
