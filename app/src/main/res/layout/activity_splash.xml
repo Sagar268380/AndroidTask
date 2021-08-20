@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:id="@+id/animation_view"
         app:lottie_rawRes="@raw/weather"
+        android:tint="@color/purple_700"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"/>
 

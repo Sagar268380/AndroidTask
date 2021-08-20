@@ -8,18 +8,19 @@
     android:background="@drawable/gradient">
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="120dp"
         android:id="@+id/weatherIcon"
-        app:tint="#ffb72d"
-        android:src="@drawable/finding"
+        app:tint="#fff"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/clouds"
         android:layout_marginTop="60dp">
     </ImageView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="60dp"
         app:cardCornerRadius="15dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
@@ -29,10 +30,9 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:orientation="vertical"
-        android:background="#68b3da"
+        android:background="@color/purple_700"
         >
 
-        <!--inserting celsius value -->
         <TextView
             android:id="@+id/temperature"
             android:layout_width="wrap_content"
@@ -58,10 +58,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/weatherCondition"
-            android:textSize="30sp"
+            android:textSize="27sp"
+            android:textStyle="bold"
             android:layout_below="@id/temperature"
             android:textColor="@color/white"
-            android:text="---------"
+            android:layout_marginTop="8dp"
+            android:text="Condition..."
             android:paddingStart="30sp">
 
         </TextView>
@@ -71,9 +73,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/cityName"
-            android:textSize="40sp"
+            android:textSize="27sp"
+            android:layout_marginTop="8dp"
             android:textStyle="bold"
-            android:text="Fetching_____"
+            android:text="Fetching..."
             android:paddingStart="30sp"
             android:textColor="@color/white">
 
@@ -88,12 +91,13 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_centerInParent="true"
+        android:elevation="10dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_alignParentBottom="true"
         android:id="@+id/cityFinder"
         android:background="@drawable/buttondesign"
-        android:layout_marginBottom="40dp">
+        android:layout_marginBottom="70dp">
 
         <TextView
             android:layout_width="wrap_content"

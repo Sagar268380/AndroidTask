@@ -19,6 +19,11 @@ public class CityFind extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_city_find);
+
+        try {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e) { }
         init();
 
         backButton.setOnClickListener(v -> {

@@ -12,7 +12,7 @@
         android:layout_width="67dp"
         android:layout_height="61dp"
         android:layout_alignParentStart="true"
-        app:tint="#ffb72d"
+        app:tint="#fff"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
@@ -27,6 +27,7 @@
         android:layout_height="150dp"
         android:scaleType="centerCrop"
         android:src="@drawable/rain"
+        app:tint="#fff"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/backButton"></ImageView>
 
@@ -56,6 +57,7 @@
         android:layout_marginRight="30dp"
         android:layout_alignParentBottom="true"
         android:id="@+id/btnSearch"
+        android:elevation="10dp"
         android:background="@drawable/buttondesign"
         android:layout_marginBottom="80dp">
 

@@ -25,6 +25,11 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.View
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        try {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e) {}
         init();
         presenter = new HomePresenter(this);
         mCityFinder.setOnClickListener(v -> {
